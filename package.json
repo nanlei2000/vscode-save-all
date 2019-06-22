@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/nanlei2000/vscode-save-all.git/issues"
   },
-  "publisher": "nanlei2000",
+  "publisher": "nanlei",
   "engines": {
     "vscode": "^1.5.0"
   },
