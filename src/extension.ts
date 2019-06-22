@@ -1,14 +1,13 @@
-'use strict';
-import * as vscode from 'vscode';
+'use strict'
+import * as vscode from 'vscode'
 
 export function activate(context: vscode.ExtensionContext) {
+  let disposable = vscode.commands.registerCommand('extension.closeAll', () => {
+    vscode.commands.executeCommand('workbench.action.files.saveAll')
+  })
 
-    let disposable = vscode.commands.registerCommand('extension.closeAll', () => {
-        vscode.commands.executeCommand('workbench.action.closeEditorsInGroup');
-    });
-
-    context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable)
 }
-
-export function deactivate() {
-}
+//  light:#424242
+// dark :#c5c5c5
+export function deactivate() {}

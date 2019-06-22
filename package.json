@@ -1,54 +1,56 @@
 {
-    "name": "close-all",
-    "displayName": "Close All",
-    "description": "Adds a close all button to the editor title area",
-    "version": "1.0.2",
-    "repository": {
+  "name": "save-all",
+  "displayName": "Save All",
+  "description": "Adds a save all button to the editor title area",
+  "version": "1.0.0",
+  "repository": {
     "type": "git",
-        "url": "https://github.com/bpasero/vscode-close-all.git"
-    },
-    "bugs": {
-        "url": "https://github.com/bpasero/vscode-close-all/issues"
-    },
-    "publisher": "benjpas",
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:extension.closeAll"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [{
-            "command": "extension.closeAll",
-            "title": "Close All Editors in Group",
-            "icon": {
-                "light": "./media/closeall.svg",
-                "dark": "./media/closeall_inverse.svg"
-            }
-        }],
-        "menus": {
-            "editor/title": [
-                {
-                    "command": "extension.closeAll",
-                    "group": "navigation"
-                }
-            ]
+    "url": "https://github.com/nanlei2000/vscode-save-all.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nanlei2000/vscode-save-all.git/issues"
+  },
+  "publisher": "nanlei2000",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.saveAll"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.saveAll",
+        "title": "Save All Files",
+        "icon": {
+          "light": "./media/saveall_inverse.svg",
+          "dark": "./media/saveall.svg"
         }
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "extension.saveAll",
+          "group": "navigation"
+        }
+      ]
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  }
 }
